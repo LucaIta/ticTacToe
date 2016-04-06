@@ -1,13 +1,5 @@
 var userX =[];
 var user0 =[];
-
-// $(".col-md-2").click(function() {
-//   var x_locations = $(this).attr("id");
-//   newarrayX.push(x_locations);
-//   console.log(newarrayX);
-// })
-
-
 var clicks = 1;
 
 $(document).ready(function(){
@@ -17,12 +9,18 @@ $(document).ready(function(){
       if (clicks % 2 === 0) {
         console.log("user x turn");
         var x_locations = $(this).attr("id");
+        // $(this).show();
+        // $("#showX").click(function(){
+        //    $("#showX").show();
+        // })
+        $(this).show();  
         userX.push(x_locations);
         console.log(userX);
       }
       else {
         console.log("user 0 turn");
         var x_locations = $(this).attr("id");
+        $(this).show();
         user0.push(x_locations);
         console.log(user0);
       }
