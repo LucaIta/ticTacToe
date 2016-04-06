@@ -24,3 +24,7 @@ h1 {
   line-height: 50px;
   border : solid;
 }
+
+p {
+  display: none;
+}

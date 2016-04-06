@@ -1,23 +1,29 @@
-// function Players (mark) {
-//   this.mark = mark;
-// };
-//
-// Players.prototype.selectedAreas {
-//   var x = ;
-//
-// };
+var userX =[];
+var user0 =[];
+
+// $(".col-md-2").click(function() {
+//   var x_locations = $(this).attr("id");
+//   newarrayX.push(x_locations);
+//   console.log(newarrayX);
+// })
+
+
+var clicks = 1;
 
 $(document).ready(function(){
-  var newarrayX = [];
-
-
-
   $(".col-md-2").click(function() {
-    var x_locations = $(this).attr("id");
-    newarrayX.push(x_locations);
-    console.log(newarrayX);
+    clicks ++;
+    if (clicks < 11){
+      if (clicks % 2 === 0) {
+        console.log("user x turn");
+      }
+      else {
+        console.log("user 0 turn");
+      }
+    }
   })
-});
+})
+
 
  //
  //  var playerX = function(){
