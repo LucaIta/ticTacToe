@@ -1,0 +1,11 @@
+h1 {
+  boarder: columns align center
+}
+
+.col-md-2 {
+  float: left;
+  width: : 33.33% ;
+  border-style: solid;
+  color: black;
+  min-height: 80px;
+}
