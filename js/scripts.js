@@ -16,9 +16,15 @@ $(document).ready(function(){
     if (clicks < 11){
       if (clicks % 2 === 0) {
         console.log("user x turn");
+        var x_locations = $(this).attr("id");
+        userX.push(x_locations);
+        console.log(userX);
       }
       else {
         console.log("user 0 turn");
+        var x_locations = $(this).attr("id");
+        user0.push(x_locations);
+        console.log(user0);
       }
     }
   })
