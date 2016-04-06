@@ -13,14 +13,14 @@ $(document).ready(function(){
         // $("#showX").click(function(){
         //    $("#showX").show();
         // })
-        $(this).show();  
+        // $(this).show();
         userX.push(x_locations);
         console.log(userX);
       }
       else {
         console.log("user 0 turn");
         var x_locations = $(this).attr("id");
-        $(this).show();
+        // $(this).show();
         user0.push(x_locations);
         console.log(user0);
       }
