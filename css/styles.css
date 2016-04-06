@@ -2,10 +2,25 @@ h1 {
   boarder: columns align center
 }
 
-.col-md-2 {
+/*#gameBoard {
   float: left;
   width: : 33.33% ;
   border-style: solid;
   color: black;
   min-height: 80px;
+  box-shadow: 4px 4px 5px 0px;
+  line-height: 130px;
+  border : solid;
+}*/
+
+.col-md-2 {
+  float: left;
+  width: : 33.33% ;
+  border-style: solid;
+  color: black;
+  min-height: 120px;
+  min-width: 120px;
+  box-shadow: 4px 4px 5px 0px;
+  line-height: 50px;
+  border : solid;
 }
