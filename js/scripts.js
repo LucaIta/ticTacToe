@@ -2,9 +2,21 @@ var userX =[];
 var user0 =[];
 var clicks = 1;
 
-var winnerChecker = function (userArray){
+var winnerChecker = function (userArray,opponentArray){
   var win = 0;
-  var arrayOfWinningArrays = [["a","b","c"], ["d","e","f"], ["g","h","l"], ["a","d","g"],["b","e","h"], ["c","f","l"], ["a","e","l"], ["c","e","g"]];
+  var arrayOfWinningArrays = [["1","2","4"], ["8","16","32"], ["64","128","256"], ["1","16","256"],["2","16","128"], ["4 ","32","256"], ["1","8","64"], ["4","16","64"]];
+  opponentArray.forEach(function(elementOfOpponentArray){
+    var index = 0;
+    arrayOfWinningArrays.forEach(function(winningArray){
+      index ++;
+      winningArray.forEach(function(elementOfWinningArray){
+        if (elementOfOpponentArray === elementOfWinningArray) {
+          opponentArray.splice(index -1,1);
+          console.log(opponentArray);
+        }
+      })
+    })
+  })
   arrayOfWinningArrays.forEach(function(winningArray){
   win = 0;
   winningArray.forEach(function(elementOfWinningArray){
@@ -26,22 +38,27 @@ $(document).ready(function(){
     clicks ++;
     if (clicks < 11){
       if (clicks % 2 === 0) {
-        console.log("user x turn");
         var x_locations = $(this).attr("id");
         $(this).text("X");
         userX.push(x_locations);
-        winnerChecker(userX);
-        console.log(userX);
+        winnerChecker(userX,user0);
       }
       else {
-        console.log("user 0 turn");
         var x_locations = $(this).attr("id");
         $(this).text("O");
         user0.push(x_locations);
-        winnerChecker(user0);
-        console.log(user0);
+        winnerChecker(user0,userX);
       }
 
     }
   })
 })
+// var defaultUser
+// var easyComp = {
+//   var easyLogic
+// }
+// var hardComp = {
+//   var hardLogic =
+//     // var compWin = [7, 56, 448, 73, 146, 292, 273, 84];
+//     var compMoves =
+// }

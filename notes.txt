@@ -1,0 +1,27 @@
+front end:
+some user logic to allow for someone to choose human, easy computer or hard computer (branching)
+(buttons)
+
+back end
+assign vars for every option
+(DEFAULT, compEasy, compHard)
+assign randomizer via array of columns id's
+ ex:
+ https://zenscript.wordpress.com/2013/11/23/how-to-pick-a-random-entry-out-of-an-array-javascript/
+write ai for logic.
+
+needs blank to capture null state
+need to reassign values to numbers.
+
+needs math for the ai calculation
+
+
+array for values:
+
+
+
+
+{win1: ["1","2","4"], win2: ["8","16","32"], win3: ["64","128","256"]}
+
+if userx selects 1 || 2 || 4 pop.win1
+if userX selects

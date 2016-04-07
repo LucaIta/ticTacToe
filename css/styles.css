@@ -28,3 +28,9 @@ h1 {
 /*li {
   display: none;
 }*/
+
+div {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
