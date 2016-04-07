@@ -15,7 +15,6 @@ var computerMoves = function (){
     var targetVariable = arrayOfWinningArraysForComputer[0][0];
     $("#" + targetVariable + "").text("0");
     arrayOfWinningArraysForComputer[0].shift();
-    console.log("The array which I'm targetin now contains" + arrayOfWinningArraysForComputer[0]);
     // }
   }
 
@@ -29,7 +28,6 @@ var arrayRemoversFromComputer = function(userXelement){
         }
       })
     })
-    console.log("the Array Romevers has been run. arrayOfWinningArraysForComputer is now " + arrayOfWinningArraysForComputer);
   }
 
 
@@ -66,6 +64,7 @@ $(document).ready(function(){
   // $(".col-md-2").one("click", function() {
     $(".col-md-2").click(function() {
     clicks ++;
+    console.log("click is" + clicks);
       if (clicks % 2 === 0) {
         var x_locations = $(this).attr("id");
         arrayRemoversFromComputer(x_locations);
@@ -74,24 +73,17 @@ $(document).ready(function(){
         userX.push(x_locations);
         winnerChecker(userX,user0);
       }
-
-      // to reactivate user 0 I need to uncomment this lines
-      // else {
-      //   var x_locations = $(this).attr("id");
-      //   $(this).text("O");
-      //   console.log("user is 0");
-      //   user0.push(x_locations);
-      //   winnerChecker(user0,userX);
-      // }
-    computerMoves();
-  })
+      else {
+        console.log("user is user 0");
+        var x_locations = $(this).attr("id");
+        $(this).text("O");
+        console.log("user is 0");
+        user0.push(x_locations);
+        winnerChecker(user0,userX);
+      }
+      if (manORcomputer === "pVScomputer") {
+        console.log("computer moves");
+        computerMoves();
+  }
 })
-// var defaultUser
-// var easyComp = {
-//   var easyLogic
-// }
-// var hardComp = {
-//   var hardLogic =
-//     // var compWin = [7, 56, 448, 73, 146, 292, 273, 84];
-//     var compMoves =
-// }
+})
